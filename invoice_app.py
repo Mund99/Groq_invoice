@@ -8,9 +8,7 @@ import streamlit as st
 from config import SYSTEM_MESSAGE, MODELS_DETAILS, TEMPERATURE
 
 
-client = Groq(
-       api_key = "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", 
-)
+client = Groq(api_key = st.secrets["api"]["GROQ_API_KEY"])
 
 def main():
     st.set_page_config(page_title="[Test] Invoice Chatbot", page_icon=":robot:", layout="wide")
