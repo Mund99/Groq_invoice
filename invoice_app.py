@@ -9,7 +9,7 @@ from config import SYSTEM_MESSAGE, MODELS_DETAILS, TEMPERATURE
 
 
 client = Groq(
-       api_key = os.getenv('GROQ_API_KEY'), 
+       api_key = "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", 
 )
 
 def main():
