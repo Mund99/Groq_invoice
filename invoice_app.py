@@ -13,13 +13,11 @@ def initialize_session_state():
     if "messages" not in st.session_state:
         st.session_state.messages = initial_system_msg
     if "selected_model" not in st.session_state:
-        st.session_state.selected_model = list(MODELS_DETAILS.keys())[
-            2
-        ]  # Default to Llama3-8b
+        st.session_state.selected_model = None
     if "temperature" not in st.session_state:
         st.session_state.temperature = 0.0
     if "api_key" not in st.session_state:
-        st.session_state.api_key = st.secrets["api"]["GROQ_API_KEY"]
+        st.session_state.api_key = None
 
 
 def set_page_config():
@@ -110,7 +108,6 @@ def sidebar_model_config():
         options=list(MODELS_DETAILS.keys()),
         format_func=lambda x: MODELS_DETAILS[x]["name"],
         index=2,  # Default to Llama3-8b
-        key="selected_model",  # Add this line
     )
 
     temperature = st.sidebar.slider(
@@ -119,7 +116,6 @@ def sidebar_model_config():
         max_value=1.0,
         value=0.0,  # Default temperature
         step=0.01,
-        key="temperature",  # Add this line
     )
     return selected_model, temperature
 
