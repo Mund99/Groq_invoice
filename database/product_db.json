@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Fresh Fragrant Rice",
+        "unit_price": 50.00,
+        "uom": "10kg",
+        "description": "High-quality fragrant rice, 10kg pack"
+    },
+    {
+        "name": "Fresh Fragrant Rice",
+        "unit_price": 30.00,
+        "uom": "5kg",
+        "description": "High-quality fragrant rice, 5kg pack"
+    },
+    {
+        "name": "Fresh Fragrant Rice",
+        "unit_price": 8.00,
+        "uom": "1kg",
+        "description": "High-quality fragrant rice, 1kg pack"
+    },
+    {
+        "name": "Spritzer Mineral Water",
+        "unit_price": 2.00,
+        "uom": "1.5L",
+        "description": "Spritzer mineral water, 1.5L bottle"
+    },
+    {
+        "name": "Spritzer Mineral Water",
+        "unit_price": 1.00,
+        "uom": "600ml",
+        "description": "Spritzer mineral water, 600ml bottle"
+    },
+    {
+        "name": "Laptop",
+        "unit_price": 3500.00,
+        "uom": "unit",
+        "description": "15-inch laptop with 8GB RAM and 512GB SSD"
+    },
+    {
+        "name": "Smartphone",
+        "unit_price": 2500.00,
+        "uom": "unit",
+        "description": "6-inch smartphone with 128GB storage and 6GB RAM"
+    },
+    {
+        "name": "Printer",
+        "unit_price": 800.00,
+        "uom": "unit",
+        "description": "All-in-one inkjet printer"
+    },
+    {
+        "name": "Office Chair",
+        "unit_price": 450.00,
+        "uom": "unit",
+        "description": "Ergonomic office chair with lumbar support"
+    },
+    {
+        "name": "Desk",
+        "unit_price": 600.00,
+        "uom": "unit",
+        "description": "Adjustable height desk"
+    }
+]

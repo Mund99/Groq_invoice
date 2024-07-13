@@ -1,0 +1,23 @@
+[
+    {
+        "company_name": "ABC Sdn Bhd",
+        "address": "123, Jalan Bukit Bintang, 55100 Kuala Lumpur, Malaysia",
+        "contact_person": "Mr. Lim",
+        "contact_number": "+60 3-1234 5678",
+        "email": "lim@abc.com.my"
+    },
+    {
+        "company_name": "XYZ Trading",
+        "address": "456, Jalan Ampang, 50450 Kuala Lumpur, Malaysia",
+        "contact_person": "Ms. Tan",
+        "contact_number": "+60 3-8765 4321",
+        "email": "tan@xyztrading.com.my"
+    },
+    {
+        "company_name": "Tech Innovators",
+        "address": "789, Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia",
+        "contact_person": "Mr. Wong",
+        "contact_number": "+60 3-1234 8765",
+        "email": "wong@techinnovators.com.my"
+    }
+]
