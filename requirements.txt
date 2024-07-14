@@ -1,7 +1,9 @@
-fuzzywuzzy==0.18.0
-groq==0.9.0
-pandas==2.2.2
-streamlit==1.36.0
+fuzzywuzzy
+groq
+pandas
+streamlit
 google-generativeai
-protobuf<4,>=3.12
+protobuf
 google-api-python-client
+grpcio
+grpcio-tools
