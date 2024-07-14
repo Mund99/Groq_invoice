@@ -1,9 +1,5 @@
-streamlit
-pandas
-numpy
-groq
-langchain_community
-langchain_groq
-yfinance
-langchain_core
-google-generativeai
+fuzzywuzzy==0.18.0
+groq==0.9.0
+pandas==2.2.2
+protobuf==5.27.2
+streamlit==1.36.0
