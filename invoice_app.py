@@ -195,35 +195,74 @@ def display_internal_process():
                 
                 st.sidebar.markdown("---")
         
+        # elif st.session_state.selected_model in gemini_models:
+        #     st.sidebar.markdown("### Internal Model Process (Using Gemini API)")
+            
+        #     for msg in st.session_state.gemini_chat.history:
+        #         for part in msg.parts:
+        #             part_dict = type(part).to_dict(part)
+                    
+        #             if msg.role == 'user':
+        #                 st.sidebar.markdown(f"**User:**")
+        #             elif msg.role == 'model':
+        #                 st.sidebar.markdown(f"**Model:**")
+                    
+        #             if 'text' in part_dict:
+        #                 st.sidebar.markdown(f"```\n{part_dict['text'][:200]}...\n```")
+        #             elif 'function_call' in part_dict:
+        #                 func_call = part_dict['function_call']
+        #                 st.sidebar.markdown(f"Function Call: `{func_call['name']}`")
+        #                 st.sidebar.markdown(f"Arguments:")
+        #                 st.sidebar.json(func_call['args'])
+        #             elif 'function_response' in part_dict:
+        #                 func_response = part_dict['function_response']
+        #                 st.sidebar.markdown(f"Function Response:")
+        #                 st.sidebar.json(func_response)
+        #             else:
+        #                 st.sidebar.markdown(f"Unknown part type:")
+        #                 st.sidebar.json(part_dict)
+                
+        #         st.sidebar.markdown("---")
+        
         elif st.session_state.selected_model in gemini_models:
             st.sidebar.markdown("### Internal Model Process (Using Gemini API)")
-            
+
             for msg in st.session_state.gemini_chat.history:
+                if msg.role == 'user':
+                    st.sidebar.markdown(f"**User:**")
+                elif msg.role == 'model':
+                    st.sidebar.markdown(f"**Model:**")
+
                 for part in msg.parts:
-                    part_dict = type(part).to_dict(part)
-                    
-                    if msg.role == 'user':
-                        st.sidebar.markdown(f"**User:**")
-                    elif msg.role == 'model':
-                        st.sidebar.markdown(f"**Model:**")
-                    
-                    if 'text' in part_dict:
-                        st.sidebar.markdown(f"```\n{part_dict['text'][:200]}...\n```")
-                    elif 'function_call' in part_dict:
-                        func_call = part_dict['function_call']
-                        st.sidebar.markdown(f"Function Call: `{func_call['name']}`")
-                        st.sidebar.markdown(f"Arguments:")
-                        st.sidebar.json(func_call['args'])
-                    elif 'function_response' in part_dict:
-                        func_response = part_dict['function_response']
-                        st.sidebar.markdown(f"Function Response:")
-                        st.sidebar.json(func_response)
+                    if 'text' in part:
+                        st.sidebar.markdown(part.text)
+                    elif 'function_call' in part:
+                        func_call = part.function_call
+                        st.sidebar.markdown(f"**Function Call:** {func_call.name}")
+                        
+                        # Handle args as either MapComposite or dict
+                        if hasattr(func_call.args, 'fields'):
+                            args_dict = {field.key: field.value.string_value for field in func_call.args.fields}
+                        else:
+                            args_dict = dict(func_call.args)
+                        
+                        st.sidebar.json(args_dict)
+                    elif 'function_response' in part:
+                        func_response = part.function_response
+                        st.sidebar.markdown("**Function Response:**")
+                        
+                        # Handle response as either MapComposite or dict
+                        if hasattr(func_response.response, 'fields'):
+                            response_dict = {field.key: field.value.string_value for field in func_response.response.fields}
+                        else:
+                            response_dict = dict(func_response.response)
+                        
+                        st.sidebar.json(response_dict)
                     else:
-                        st.sidebar.markdown(f"Unknown part type:")
-                        st.sidebar.json(part_dict)
-                
+                        st.sidebar.markdown(f"**Unknown part type:**")
+                        st.sidebar.json(part)
                 st.sidebar.markdown("---")
-                
+        
 #------------------------------#
 # Processing the chat response by the model 
 
