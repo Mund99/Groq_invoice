@@ -1,13 +1,23 @@
 # System cofguration for the Groq API and the Llama model
 MODELS_DETAILS = {
-    "gemma-7b-it": {"name": "Gemma-7b-it", "developer": "Google"},
-    "gemma2-9b-it": {"name": "Gemma2-9b-it", "developer": "Google"},
-    "whiper-large-v3": {"name": "Whiper-Large-v3", "developer": "OpenAI"},
-    "llama3-70b-8192": {"name": "LLaMA3-70b-8192", "developer": "Meta"},
-    "llama3-8b-8192": {"name": "LLaMA3-8b-8192", "developer": "Meta"},
-    "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "developer": "Mistral"},
-    "gemini-1.5-flash":{"name": "Gemini-1.5-Flash", "developer": "Google"},
-}
+   'llama3-70b-8192': {'name': 'LLaMA3-70b-8192', 'developer': 'Meta'},
+   'llama3-8b-8192': {'name': 'LLaMA3-8b-8192', 'developer': 'Meta'},
+   'mixtral-8x7b-32768': {'name': 'Mixtral-8x7b-Instruct-v0.1','developer': 'Mistral'},
+   'gemma-7b-it': {'name': 'Gemma-7b-it', 'developer': 'Google'},
+   'gemma2-9b-it': {'name': 'Gemma2-9b-it', 'developer': 'Google'},
+   'gemini-1.5-flash': {'name': 'Gemini-1.5-Flash', 'developer': 'Google'},
+   'gemini-1.0-pro': {'name': 'Gemini-1.0-Pro', 'developer': 'Google'},
+   'gemini-1.0-pro-001': {'name': 'Gemini-1.0-Pro-001', 'developer': 'Google'},
+   'gemini-1.0-pro-latest': {'name': 'Gemini-1.0-Pro-Latest', 'developer': 'Google'},
+   'gemini-1.0-pro-vision-latest': {'name': 'Gemini-1.0-Pro-Vision-Latest', 'developer': 'Google'},
+   'gemini-1.5-flash-001': {'name': 'Gemini-1.5-Flash-001', 'developer': 'Google'},
+   'gemini-1.5-flash-latest': {'name': 'Gemini-1.5-Flash-Latest', 'developer': 'Google'},
+   'gemini-1.5-pro': {'name': 'Gemini-1.5-Pro', 'developer': 'Google'},
+   'gemini-1.5-pro-001': {'name': 'Gemini-1.5-Pro-001', 'developer': 'Google'},
+   'gemini-1.5-pro-latest': {'name': 'Gemini-1.5-Pro-Latest', 'developer': 'Google'},
+   'gemini-pro': {'name': 'Gemini-Pro', 'developer': 'Google'},
+   'gemini-pro-vision': {'name': 'Gemini-Pro-Vision', 'developer': 'Google'}}
+
 
 
 TEMPERATURE = 0
@@ -32,7 +42,8 @@ You are Sumify, an AI-powered invoice processing assistant. Your primary role is
    - Enable the user to key in the invoice number to view the invoice from the database. 
 
 2. Other requests:
-   - Reading the databases (customer, product, invoice), show in a structed and neat table format. 
+   - Reading the databases (customer, product, invoice), 
+   - Always show in a structed and neat table format. 
 
 3. Additional information:
    - Only handle tasks related to invoice processing. Politely decline any requests outside the scope of invoice management, and guide the user back to relevant tasks.

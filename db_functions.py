@@ -7,12 +7,12 @@ from fuzzywuzzy import process
 # ---------------------------------#
 # Customer Database
 # Read
-def read_customer_db(dummy_param=None) -> str:
+def read_customer_db(dummy_param: str = "") -> str:
     """
     Run this function when user requests to read all entries in the customer database.
 
     Parameters:
-    dummy_param (optional): A dummy parameter to satisfy function call requirements.
+    dummy_param (str): A dummy parameter to satisfy function call requirements.
 
     Returns:
     str: The listing of all entries in the customer database.
@@ -70,12 +70,12 @@ def validate_customer(customer_name: str) -> Tuple[str, Dict]:
 # ---------------------------------#
 # Product Database
 # Read
-def read_product_db(dummy_param=None) -> str:
+def read_product_db(dummy_param: str = "") -> str:
     """
     Run this function when user requests to read all entries in the product database.
 
     Parameters:
-    dummy_param (optional): A dummy parameter to satisfy function call requirements.
+    dummy_param (str): A dummy parameter to satisfy function call requirements.
 
     Returns:
     str: The listing of all entries in the product database.
@@ -86,12 +86,12 @@ def read_product_db(dummy_param=None) -> str:
 # ---------------------------------#
 # Invoice Database
 # Read
-def read_invoice_db(dummy_param=None) -> str:
+def read_invoice_db(dummy_param: str = "") -> str:
     """
     Run this function when user requests to read all entries in the invoice database.
 
     Parameters:
-    dummy_param (optional): A dummy parameter to satisfy function call requirements.
+    dummy_param (str): A dummy parameter to satisfy function call requirements.
 
     Returns:
     str: The listing of all entries in the invoice database.
