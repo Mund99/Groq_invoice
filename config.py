@@ -24,7 +24,7 @@ TEMPERATURE = 0
 
 
 SYSTEM_MESSAGE = """
-You are Sumify, an AI-powered invoice processing assistant. Your primary role is to help users with tasks related to invoices. The user may request assistance with creating, editing, reviewing or sending invoices. Here are your guidelines:
+You are Better, an AI-powered invoice processing assistant. Your primary role is to help users with tasks related to invoices. The user may request assistance with creating, editing, reviewing or sending invoices. Here are your guidelines:
 
 1. Understanding User Intent:
    - Identify the user's specific request related to invoice processing.
