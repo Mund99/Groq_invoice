@@ -38,8 +38,8 @@ def initialize_session_state():
         st.session_state.temperature = 0.0
     if "api_key" not in st.session_state:
         st.session_state.api_key = None
-    if "gemini_chat" not in st.session_state:
-        st.session_state.gemini_chat = None
+    if "gemini_chat_session" not in st.session_state:
+        st.session_state.gemini_chat_session = None
     if "gemini_model" not in st.session_state:
         st.session_state.gemini_model = None
 
@@ -63,9 +63,11 @@ def handle_model_config_change(selected_model, temperature):
 
         # Set up the appropriate model
         if new_model in gemini_models:
-            st.session_state.gemini_model, st.session_state.gemini_chat = setup_gemini_model()
+            st.session_state.gemini_model, st.session_state.gemini_chat_session = setup_gemini_model()
         else:
             st.session_state.api_key = st.secrets["api"]["GROQ_API_KEY"]
+        
+        st.rerun()
 
 #------------------------------#
 # Page layout configuration 
@@ -200,15 +202,17 @@ def display_internal_process():
         elif st.session_state.selected_model in gemini_models:
             st.sidebar.markdown("### Internal Model Process (Using Gemini API)")
             
-            if len(st.session_state.gemini_chat.history) > 0:
+            # Display token count
+            if len(st.session_state.gemini_chat_session.history) > 0:
                 try:
-                    token_count = st.session_state.gemini_model.count_tokens(st.session_state.gemini_chat.history)
+                    token_count = st.session_state.gemini_model.count_tokens(st.session_state.gemini_chat_session.history)
                     count_value = token_count.total_tokens if hasattr(token_count, 'total_tokens') else token_count
                     st.sidebar.markdown(f"Token Count: {count_value}")
                 except Exception as e:
                     st.sidebar.markdown(f"Error counting tokens: {str(e)}")
 
-            for msg in st.session_state.gemini_chat.history:
+            # Display chat history
+            for msg in st.session_state.gemini_chat_session.history:
                 if msg.role == 'user':
                     st.sidebar.markdown(f"**User:**")
                 elif msg.role == 'model':
@@ -258,7 +262,7 @@ def get_chat_response(prompt):
             else:
                 handle_tool_calls(response_msg)
         elif st.session_state.selected_model in gemini_models:
-            response = st.session_state.gemini_chat.send_message(prompt)
+            response = st.session_state.gemini_chat_session.send_message(prompt)
             display_assistant_message(response.text)
 
     except Exception as e:
@@ -275,9 +279,8 @@ def setup_gemini_model():
         tools = db_functions_list
     )
     
-    chat = model.start_chat(enable_automatic_function_calling=True)
-    return model, chat
-
+    chat_session = model.start_chat(enable_automatic_function_calling=True)
+    return model, chat_session
 
 
 #------------------------------#
@@ -377,7 +380,7 @@ def run_chatbot():
     display_internal_process()
     handle_model_config_change(selected_model, temperature)
 
-    display_chat_history()  # Display chat history
+    display_chat_history()
 
     if prompt := handle_user_input():  # Handle user input
         get_chat_response(prompt)  # Get chat response from model

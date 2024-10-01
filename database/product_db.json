@@ -1,5 +1,23 @@
 [
     {
+        "name": "Sarawak Laksa (Small)",
+        "unit_price": 9.50,
+        "uom": "bowl",
+        "description": "Small bowl of aromatic Sarawak-style laksa with shredded chicken and prawns"
+    },
+    {
+        "name": "Sarawak Laksa (Regular)",
+        "unit_price": 13.50,
+        "uom": "bowl",
+        "description": "Regular-sized bowl of aromatic Sarawak-style laksa with shredded chicken and prawns"
+    },
+    {
+        "name": "Sarawak Laksa (Special)",
+        "unit_price": 17.00,
+        "uom": "bowl",
+        "description": "Special large bowl of Sarawak-style laksa with extra toppings and premium seafood"
+    },
+    {
         "name": "Fresh Fragrant Rice",
         "unit_price": 50.00,
         "uom": "10kg",

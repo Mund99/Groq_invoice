@@ -1,3 +1,207 @@
 {
-    
+    "INV_0001": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Sarawak Laksa (Small)",
+                "product_uom": "bowl",
+                "quantity": 10,
+                "unit_price": 9.5,
+                "subtotal": 95.0
+            }
+        ],
+        "total": 95.0
+    },
+    "INV_0002": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Smartphone",
+                "product_uom": "unit",
+                "quantity": 1,
+                "unit_price": 2500.0,
+                "subtotal": 2500.0
+            },
+            {
+                "product_name": "Office Chair",
+                "product_uom": "unit",
+                "quantity": 1,
+                "unit_price": 450.0,
+                "subtotal": 450.0
+            }
+        ],
+        "total": 2950.0
+    },
+    "INV_0003": {
+        "recipient": "ABD Trading",
+        "items": [
+            {
+                "product_name": "Sarawak Laksa (Special)",
+                "product_uom": "bowl",
+                "quantity": 10,
+                "unit_price": 17.0,
+                "subtotal": 170.0
+            },
+            {
+                "product_name": "Nasi Lemak",
+                "product_uom": "plate",
+                "quantity": 5,
+                "unit_price": 5.0,
+                "subtotal": 25.0
+            }
+        ],
+        "total": 195.0
+    },
+    "INV_0004": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Sarawak Laksa (Small)",
+                "product_uom": "bowl",
+                "quantity": 10,
+                "unit_price": 9.5,
+                "subtotal": 95.0
+            },
+            {
+                "product_name": "Spritzer Mineral Water",
+                "product_uom": "600ml",
+                "quantity": 5,
+                "unit_price": 1.0,
+                "subtotal": 5.0
+            }
+        ],
+        "total": 100.0
+    },
+    "INV_0005": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Sarawak Laksa (Regular)",
+                "product_uom": "bowl",
+                "quantity": 10,
+                "unit_price": 13.5,
+                "subtotal": 135.0
+            }
+        ],
+        "total": 135.0
+    },
+    "INV_0006": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Spritzer Mineral Water",
+                "product_uom": "1.5L",
+                "quantity": 10,
+                "unit_price": 2.0,
+                "subtotal": 20.0
+            },
+            {
+                "product_name": "Desk",
+                "product_uom": "unit",
+                "quantity": 1,
+                "unit_price": 600.0,
+                "subtotal": 600.0
+            }
+        ],
+        "total": 620.0
+    },
+    "INV_0007": {
+        "recipient": "ABD Trading",
+        "items": [
+            {
+                "product_name": "Spritzer Mineral Water",
+                "product_uom": "600ml",
+                "quantity": 19,
+                "unit_price": 1.0,
+                "subtotal": 19.0
+            },
+            {
+                "product_name": "Office Chair",
+                "product_uom": "unit",
+                "quantity": 10,
+                "unit_price": 450.0,
+                "subtotal": 4500.0
+            }
+        ],
+        "total": 4519.0
+    },
+    "INV_0008": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Fresh Fragrant Rice",
+                "product_uom": "10kg",
+                "quantity": 1,
+                "unit_price": 50.0,
+                "subtotal": 50.0
+            }
+        ],
+        "total": 50.0
+    },
+    "INV_0009": {
+        "recipient": "ABD Trading",
+        "items": [
+            {
+                "product_name": "Office Chair",
+                "product_uom": "unit",
+                "quantity": 5,
+                "unit_price": 450.0,
+                "subtotal": 2250.0
+            },
+            {
+                "product_name": "Fresh Fragrant Rice",
+                "product_uom": "10kg",
+                "quantity": 2,
+                "unit_price": 50.0,
+                "subtotal": 100.0
+            }
+        ],
+        "total": 2350.0
+    },
+    "INV_0010": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Sarawak Laksa (small)",
+                "product_uom": "bowl",
+                "quantity": 5,
+                "unit_price": 9.5,
+                "subtotal": 47.5
+            },
+            {
+                "product_name": "Spritzer Mineral Water",
+                "product_uom": "600ml",
+                "quantity": 20,
+                "unit_price": 1.0,
+                "subtotal": 20.0
+            }
+        ],
+        "total": 67.5
+    },
+    "INV_0011": {
+        "recipient": "ABD Trading",
+        "items": [
+            {
+                "product_name": "Sarawak Laksa (Special)",
+                "product_uom": "bowl",
+                "quantity": 10,
+                "unit_price": 17.0,
+                "subtotal": 170.0
+            }
+        ],
+        "total": 170.0
+    },
+    "INV_0012": {
+        "recipient": "Tech Innovators",
+        "items": [
+            {
+                "product_name": "Spritzer Mineral Water (1.5L)",
+                "product_uom": "1.5L",
+                "quantity": 4,
+                "unit_price": 2.0,
+                "subtotal": 8.0
+            }
+        ],
+        "total": 8.0
+    }
 }

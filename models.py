@@ -22,7 +22,7 @@ class Customer:
 @dataclass
 class Product:
     name: str
-    price: Decimal
+    unit_price: float
     uom: str
 
 @dataclass
